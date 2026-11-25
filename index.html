@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Obed Brice Djegné — Développeur web &amp; mobile, web designer · Abidjan</title>
-<meta name="description" content="Portfolio d'Obed Brice Djegné, consultant en informatique à Abidjan : applications web et mobiles, logiciels de gestion, sites vitrines, automatisation et identité visuelle.">
+<title>Obed Brice Djegné — Développeur web &amp; mobile, web designer, technicien réseau · Abidjan</title>
+<meta name="description" content="Portfolio d'Obed Brice Djegné, consultant en informatique à Abidjan : applications web et mobiles, logiciels de gestion, sites vitrines, réseaux informatiques, automatisation et identité visuelle.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Obed Brice Djegné — Portfolio">
 <meta property="og:description" content="Applications web & mobiles, logiciels de gestion, sites et identité visuelle. Abidjan, Côte d'Ivoire.">
@@ -95,7 +95,8 @@ section.block{padding-top:clamp(56px,8vw,96px);padding-bottom:40px;display:flex;
 .empty.show{display:flex}
 
 /* steps & skills */
-.steps,.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px}
 .step{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:12px;padding:26px;border-radius:26px;min-height:230px;font-family:Montserrat,sans-serif;background:#fff;color:#120B3D;border:2px solid var(--c);transition:transform .2s ease,box-shadow .2s ease}
 .step:hover{transform:translateY(-3px)}
 .step[aria-pressed="true"]{background:var(--c);color:var(--f);box-shadow:0 18px 36px rgba(18,11,61,.2)}
@@ -115,7 +116,7 @@ section.block{padding-top:clamp(56px,8vw,96px);padding-bottom:40px;display:flex;
 footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:14px;font-weight:600;color:#5B5677;padding-top:8px;padding-bottom:32px}
 
 /* modal */
-.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}
+.modal{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;padding:16px}
 .modal.open{display:flex;animation:fadeo .2s ease both}
 .backdrop{position:absolute;inset:0;border:0;background:rgba(18,11,61,.7);cursor:pointer}
 .panel{position:relative;width:100%;max-width:760px;max-height:calc(100vh - 32px);overflow-y:auto;background:#fff;border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.4);animation:fade .35s ease both}
@@ -143,6 +144,43 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
   .navlinks{display:none}.burger{display:flex}
   .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
   .modal{align-items:flex-end;padding:0}.panel{border-radius:26px 26px 0 0;max-height:92vh}
+}
+
+/* ===== OBD — assistant ===== */
+.obd-fab{position:fixed;right:20px;bottom:20px;z-index:60;width:64px;height:64px;border-radius:50%;border:0;background:#FF6B1A;color:#120B3D;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(18,11,61,.35);transition:transform .2s ease}
+.obd-fab:hover{transform:scale(1.07) rotate(-6deg)}
+.obd-fab .ping{position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:#22C55E;border:3px solid #fff}
+.obd-tease{position:fixed;right:96px;bottom:34px;z-index:60;max-width:240px;background:#120B3D;color:#fff;font-size:14px;font-weight:600;line-height:1.4;padding:12px 16px;border-radius:16px 16px 4px 16px;box-shadow:0 12px 30px rgba(18,11,61,.3);cursor:pointer;animation:fade .4s ease both;border:0;text-align:left;font-family:inherit}
+.obd-tease[hidden],.obd-panel[hidden]{display:none}
+.obd-panel{position:fixed;right:20px;bottom:96px;z-index:61;width:min(390px,calc(100vw - 24px));height:min(600px,calc(100vh - 120px));background:#fff;border-radius:24px;box-shadow:0 30px 70px rgba(18,11,61,.35);display:flex;flex-direction:column;overflow:hidden;animation:fade .3s ease both}
+.obd-head{background:#120B3D;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.obd-av{width:44px;height:44px;flex-shrink:0;border-radius:14px;background:#FF6B1A;display:flex;align-items:center;justify-content:center}
+.obd-name{font-weight:900;font-size:17px;letter-spacing:.04em}
+.obd-st{font-size:12px;color:#C9C4E8;font-weight:600;display:flex;align-items:center;gap:6px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.obd-st i{width:8px;height:8px;border-radius:50%;background:#22C55E;display:inline-block}
+.obd-x{margin-left:auto;width:40px;height:40px;border-radius:12px;border:0;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.obd-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#FFF8F1}
+.obd-msg{max-width:86%;padding:11px 14px;border-radius:18px;font-size:14.5px;line-height:1.5;font-weight:500;animation:fade .3s ease both;white-space:pre-line;word-wrap:break-word}
+.obd-msg.bot{align-self:flex-start;background:#fff;color:#120B3D;border-bottom-left-radius:6px;box-shadow:0 2px 8px rgba(18,11,61,.06)}
+.obd-msg.me{align-self:flex-end;background:#2563EB;color:#fff;border-bottom-right-radius:6px}
+.obd-msg code{font-family:ui-monospace,Menlo,Consolas,monospace;background:#F3F0FF;color:#5B21B6;padding:1px 6px;border-radius:6px;font-size:13px}
+.obd-typing{align-self:flex-start;background:#fff;border-radius:18px;padding:12px 16px;display:flex;gap:5px}
+.obd-typing span{width:7px;height:7px;border-radius:50%;background:#A39DC4;animation:obdb 1s infinite}
+.obd-typing span:nth-child(2){animation-delay:.15s}.obd-typing span:nth-child(3){animation-delay:.3s}
+@keyframes obdb{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+.obd-opts{display:flex;flex-wrap:wrap;gap:8px;padding:2px 0 4px}
+.obd-opt{border:2px solid #120B3D;background:#fff;color:#120B3D;font:700 13.5px Montserrat,sans-serif;padding:9px 13px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;transition:background .15s,color .15s}
+.obd-opt:hover{background:#120B3D;color:#fff}
+.obd-opt.wa{background:#22C55E;border-color:#22C55E;color:#052E16}
+.obd-opt.wa:hover{background:#16A34A;border-color:#16A34A;color:#fff}
+.obd-form{display:flex;gap:8px;padding:12px;border-top:1px solid #EEEAF5;background:#fff}
+.obd-form input{flex:1;min-width:0;border:2px solid #E4E0F0;border-radius:999px;padding:0 16px;height:46px;font:500 14.5px Montserrat,sans-serif;color:#120B3D;outline:none}
+.obd-form input:focus{border-color:#120B3D}
+.obd-send{width:46px;height:46px;flex-shrink:0;border-radius:50%;border:0;background:#FF6B1A;color:#120B3D;cursor:pointer;display:flex;align-items:center;justify-content:center}
+@media (max-width:520px){
+  .obd-panel{right:0;bottom:0;width:100vw;height:100%;max-height:100dvh;border-radius:0}
+  .obd-fab{right:14px;bottom:14px}
+  .obd-tease{right:88px;bottom:26px;max-width:200px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -175,7 +213,7 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
     <div class="hero-txt">
       <span class="dispo"><span class="dot pulse"></span>Disponible pour de nouvelles missions</span>
       <h1>Je crée des <span style="color:#FF6B1A">applications</span> et des <span style="color:#F472B6">identités</span> qui font briller les entreprises.</h1>
-      <p>Consultant en informatique à Abidjan. Développeur web &amp; mobile, web designer et graphiste — du cahier des charges à la mise en ligne.</p>
+      <p>Consultant en informatique à Abidjan. Développeur web &amp; mobile, web designer, graphiste et technicien réseau — du cahier des charges à la mise en ligne.</p>
       <div class="actions">
         <a href="#projets" class="btn btn-or lift">Voir mes réalisations</a>
         <a href="#contact" class="btn btn-wh lift">Discuter d'un projet</a>
@@ -183,7 +221,7 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
       <div class="stats">
         <div style="background:#2563EB"><b id="statCount">0</b><small style="color:#E0E9FF">projets réalisés</small></div>
         <div style="background:#DB2777"><b id="statOnline">0</b><small style="color:#FFE4F0">plateformes en ligne</small></div>
-        <div style="background:#7C3AED"><b>4</b><small style="color:#EDE5FF">domaines d'expertise</small></div>
+        <div style="background:#7C3AED"><b>5</b><small style="color:#EDE5FF">domaines d'expertise</small></div>
       </div>
     </div>
     <div class="hero-img">
@@ -230,13 +268,14 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
           <span class="tag" style="background:#7C3AED">Compétences</span>
           <h2 class="title">Ce que je fais</h2>
         </div>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#4A4566;max-width:420px;font-weight:500">Un seul interlocuteur pour le logiciel, l'application mobile et l'image de marque.</p>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:#4A4566;max-width:420px;font-weight:500">Un seul interlocuteur pour le logiciel, l'application mobile, le réseau et l'image de marque.</p>
       </div>
       <div class="skills">
         <div class="skill lift" style="background:#EEF3FF"><span class="ic" style="background:#2563EB"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3>Applications web &amp; mobile</h3><p>Angular, Ionic, PHP, Laravel, Node.js. Applications Android et iOS, espaces clients, réservations, notifications.</p></div>
         <div class="skill lift" style="background:#F4EEFF"><span class="ic" style="background:#7C3AED"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>Logiciels de gestion</h3><p>Paie, RH, trésorerie, immobilier, carburant, pressing : des outils sur mesure qui suivent les règles de l'entreprise.</p></div>
         <div class="skill lift" style="background:#FFEEF6"><span class="ic" style="background:#DB2777"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10"/></svg></span><h3>Design &amp; identité visuelle</h3><p>Logos, chartes graphiques, plaquettes commerciales, interfaces et sites vitrines.</p></div>
         <div class="skill lift" style="background:#E8F7F4"><span class="ic" style="background:#0F766E"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Automatisation &amp; web</h3><p>Workflows n8n, traitement des mails, sites institutionnels, noms de domaine, DNS et messagerie professionnelle.</p></div>
+        <div class="skill lift" style="background:#FFF3E8"><span class="ic" style="background:#C2410C"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg></span><h3>Réseau &amp; infrastructure</h3><p>Technicien réseau : installation, configuration et dépannage de réseaux informatiques pour les bureaux et les entreprises.</p></div>
       </div>
     </div>
   </section>
@@ -288,6 +327,26 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
   </div>
 </div>
 
+<!-- ===== OBD — assistant ===== -->
+<button class="obd-tease" id="obdTease" hidden>Psst… <b>OBD.exe</b> est en ligne 🤖 Une question sur un projet ?</button>
+<button class="obd-fab" id="obdFab" aria-label="Discuter avec OBD, l'assistant d'Obed" aria-expanded="false" aria-controls="obdPanel">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="14" r="1.2" fill="currentColor"/><circle cx="15" cy="14" r="1.2" fill="currentColor"/><path d="M2 13v3M22 13v3"/></svg>
+  <span class="ping"></span>
+</button>
+<div class="obd-panel" id="obdPanel" role="dialog" aria-label="OBD, l'assistant d'Obed" hidden>
+  <div class="obd-head">
+    <span class="obd-av"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#120B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="14" r="1.2" fill="#120B3D"/><circle cx="15" cy="14" r="1.2" fill="#120B3D"/></svg></span>
+    <div><div class="obd-name">OBD</div><div class="obd-st"><i></i>en ligne · 0 bug détecté</div></div>
+    <button class="obd-x" id="obdClose" aria-label="Fermer la discussion"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="obd-log" id="obdLog" aria-live="polite"></div>
+  <form class="obd-form" id="obdForm" autocomplete="off">
+    <label class="sr" for="obdInput">Votre message pour OBD</label>
+    <input id="obdInput" placeholder="Écrivez à OBD… (essayez « blague »)" maxlength="200">
+    <button class="obd-send" aria-label="Envoyer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+</div>
+
 <script>
 (function(){
   const B = 'images/';
@@ -335,7 +394,7 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
   $('statOnline').textContent = projects.filter((p) => p.status === 'En ligne').length;
   $('year').textContent = new Date().getFullYear();
 
-  const words = ['Angular', 'Ionic', 'PHP', 'Laravel', 'Node.js', 'Applications mobiles', 'Logiciels de gestion', 'n8n', 'Identité visuelle', 'Sites vitrines'];
+  const words = ['Angular', 'Ionic', 'PHP', 'Laravel', 'Node.js', 'Applications mobiles', 'Logiciels de gestion', 'Réseaux informatiques', 'n8n', 'Identité visuelle', 'Sites vitrines'];
   $('track').innerHTML = words.concat(words).map((w) => '<span>' + esc(w) + '   ✸</span>').join('');
 
   const matchQ = (p) => !query || (p.title + ' ' + p.desc + ' ' + p.tech.join(' ') + ' ' + catLabel[p.cat]).toLowerCase().indexOf(query) !== -1;
@@ -428,6 +487,182 @@ input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #FACC
 
   render();
   renderSteps();
+
+  /* ===== OBD — assistant scénarisé ===== */
+  (function obd() {
+    const WA = 'https://wa.me/2250748784077?text=';
+    const MAIL = 'mailto:djegneobed@gmail.com';
+    const LI = 'https://www.linkedin.com/in/obed-djegn%C3%A9-0748784i/';
+    const fab = $('obdFab'), panel = $('obdPanel'), log = $('obdLog'), tease = $('obdTease');
+    let started = false, busy = false, jokeI = Math.floor(Math.random() * 8);
+    const wa = (msg) => WA + encodeURIComponent(msg);
+    const jokes = [
+      "Pourquoi les développeurs confondent Halloween et Noël ?\nParce que OCT 31 = DEC 25. 🎃🎄",
+      "Il y a 10 types de personnes : celles qui comprennent le binaire… et les autres.",
+      "Un SQL entre dans un bar, s'approche de deux tables et demande : « Je peux vous JOIN ? »",
+      "Mon code marche et je ne sais pas pourquoi. Mon code ne marche pas et je ne sais pas pourquoi. Bienvenue dans le métier. 😅",
+      "Le réseau, c'est comme une blague UDP : je vous la raconte, mais je ne garantis pas que vous la recevrez.",
+      "« Ça marchait sur ma machine ! » — dernière phrase connue avant l'invention des serveurs.",
+      "Pourquoi le développeur est-il parti du restaurant ? Il n'arrivait pas à trouver le bon `<table>`.",
+      "J'ai demandé au Wi-Fi s'il m'aimait. Il m'a dit : « Connexion limitée. » 💔"
+    ];
+
+    function scrollDown() { log.scrollTop = log.scrollHeight; }
+    function clearOpts() { log.querySelectorAll('.obd-opts').forEach((o) => o.remove()); }
+    function add(text, who) {
+      const d = document.createElement('div');
+      d.className = 'obd-msg ' + who;
+      d.innerHTML = esc(text).replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+      log.appendChild(d); scrollDown();
+    }
+    function opts(list) {
+      const w = document.createElement('div');
+      w.className = 'obd-opts';
+      list.forEach((o) => {
+        const el = document.createElement(o.href ? 'a' : 'button');
+        el.className = 'obd-opt' + (o.wa ? ' wa' : '');
+        el.textContent = o.label;
+        if (o.href) { el.href = o.href; if (!o.href.startsWith('#')) { el.target = '_blank'; el.rel = 'noopener'; } el.addEventListener('click', () => { if (o.after) setTimeout(() => go(o.after), 400); }); }
+        else { el.type = 'button'; el.addEventListener('click', () => { add(o.label, 'me'); clearOpts(); go(o.go, o.arg); }); }
+        w.appendChild(el);
+      });
+      log.appendChild(w); scrollDown();
+    }
+    function say(lines, then) {
+      busy = true;
+      const arr = Array.isArray(lines) ? lines.slice() : [lines];
+      (function next() {
+        if (!arr.length) { busy = false; if (then) then(); return; }
+        const t = document.createElement('div');
+        t.className = 'obd-typing'; t.innerHTML = '<span></span><span></span><span></span>';
+        log.appendChild(t); scrollDown();
+        const txt = arr.shift();
+        setTimeout(() => { t.remove(); add(txt, 'bot'); next(); }, Math.min(1100, 380 + txt.length * 9));
+      })();
+    }
+    function showProjects(cat) {
+      filter = cat; query = ''; $('q').value = ''; render();
+      if (window.innerWidth <= 520) closeP();
+      setTimeout(() => document.getElementById('projets').scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    }
+    const quote = (type) => ({ label: '💬 Demander un devis à Obed', href: wa('Bonjour Obed, je viens de votre portfolio. J\'ai un projet : ' + type + '. Pouvez-vous me faire un devis ?'), wa: true, after: 'thanks' });
+    const menu = () => opts([
+      { label: '🚀 J\'ai un projet', go: 'project' },
+      { label: '🗂️ Voir les réalisations', go: 'works' },
+      { label: '🌐 Réseau & dépannage', go: 'net' },
+      { label: '💰 Combien ça coûte ?', go: 'price' },
+      { label: '🧑‍💻 Qui est Obed ?', go: 'who' },
+      { label: '📞 Parler à Obed', go: 'contact' }
+    ]);
+    const back = { label: '↩︎ Menu principal', go: 'menu' };
+
+    const services = {
+      app: { t: 'une application web ou mobile', cat: 'app', txt: "Applications web et mobiles (Android, iOS) : espaces clients, réservations, livraisons, notifications… Obed code en Angular, Ionic, PHP, Laravel et Node.js. Bref, il parle couramment le JavaScript. 🤓" },
+      gest: { t: 'un logiciel de gestion', cat: 'gest', txt: "Logiciels de gestion sur mesure : paie, RH, trésorerie, stocks, immobilier, carburant, pressing… Si votre entreprise vit encore dans 14 fichiers Excel, c'est le moment de faire un `git commit` vers le futur." },
+      site: { t: 'un site internet', cat: 'auto', txt: "Sites vitrines et sites institutionnels, bilingues si besoin, adaptés au téléphone et prêts pour Google. Votre future vitrine, ouverte 24h/24 sans pause café. ☕" },
+      design: { t: 'une identité visuelle', cat: 'design', txt: "Identité visuelle : logo, charte graphique, plaquette commerciale. Obed est aussi graphiste — il sait que Comic Sans n'est pas une stratégie de marque. 🎨" },
+      auto: { t: 'une automatisation', cat: 'auto', txt: "Automatisations : tri des mails, collecte de CV, récapitulatifs envoyés tout seuls… On confie les tâches répétitives aux robots. (Je plaide coupable, je suis un robot. 🤖)" },
+      net: { t: 'un réseau informatique', cat: null, txt: "Réseau : installation, configuration et dépannage de réseaux informatiques pour bureaux et entreprises. Obed est technicien réseau — il sait que « redémarrer la box » n'est pas toujours la solution. 😉" }
+    };
+
+    function go(step, arg) {
+      if (step === 'menu') return say("Retour au menu. Je vous écoute, humain. 👾", menu);
+      if (step === 'project') return say("Excellent ! 🚀 Quel type de projet avez-vous en tête ?", () => opts([
+        { label: '📱 Application web / mobile', go: 'svc', arg: 'app' },
+        { label: '📊 Logiciel de gestion', go: 'svc', arg: 'gest' },
+        { label: '🌍 Site internet', go: 'svc', arg: 'site' },
+        { label: '🎨 Logo & identité', go: 'svc', arg: 'design' },
+        { label: '⚙️ Automatisation', go: 'svc', arg: 'auto' },
+        { label: '🌐 Réseau', go: 'svc', arg: 'net' }
+      ]));
+      if (step === 'svc') {
+        const s = services[arg];
+        const o = [quote(s.t)];
+        if (s.cat) o.push({ label: '👀 Voir des exemples', go: 'show', arg: s.cat });
+        o.push(back);
+        return say([s.txt, "Chaque projet est unique, donc Obed prépare un devis adapté au vôtre. Je lui transmets votre demande ?"], () => opts(o));
+      }
+      if (step === 'show') return say("Chargement des projets… `[██████████] 100%` ✅", () => { showProjects(arg); opts([{ label: '💬 Demander un devis', href: wa('Bonjour Obed, je viens de votre portfolio et j\'aimerais discuter d\'un projet.'), wa: true, after: 'thanks' }, back]); });
+      if (step === 'works') return say("Ma base de données contient **" + projects.length + " projets**. Laquelle de ces catégories voulez-vous `SELECT` ?", () => opts([
+        { label: '📱 Web & mobile', go: 'show', arg: 'app' },
+        { label: '📊 Logiciels de gestion', go: 'show', arg: 'gest' },
+        { label: '🌍 Sites & automatisation', go: 'show', arg: 'auto' },
+        { label: '🎨 Design', go: 'show', arg: 'design' },
+        { label: '✨ Tout voir', go: 'show', arg: 'all' }
+      ]));
+      if (step === 'net') return say([services.net.txt, "Wi-Fi qui rame, câblage à refaire, nouveau bureau à équiper ? Décrivez votre souci à Obed, il vous répond directement."], () => opts([quote('un réseau informatique (installation ou dépannage)'), back]));
+      if (step === 'price') return say(["`Erreur 402 : prix introuvable dans ma mémoire.` 😅", "Pas de grille de tarifs ici : chaque projet est différent, alors Obed fait un **devis personnalisé** selon vos besoins. Le plus simple : lui écrire en deux lignes ce que vous voulez."], () => opts([
+        { label: '💬 Demander un devis sur WhatsApp', href: wa('Bonjour Obed, je viens de votre portfolio et j\'aimerais un devis pour mon projet : '), wa: true, after: 'thanks' },
+        { label: '✉️ Par email', href: MAIL + '?subject=' + encodeURIComponent('Demande de devis (depuis le portfolio)'), after: 'thanks' },
+        back
+      ]));
+      if (step === 'who') return say(["**Obed Brice Djegné**, consultant en informatique à Abidjan. 🇨🇮", "Développeur web & mobile, web designer, graphiste… et technicien réseau. Un vrai couteau suisse en `full-stack`.", "Lui transforme le café en code. Moi, je transforme vos questions en réponses. Chacun son job. ☕➡️💻"], () => opts([{ label: '🗂️ Voir ses réalisations', go: 'works' }, { label: '📞 Le contacter', go: 'contact' }, back]));
+      if (step === 'contact') return say("Connexion avec l'humain en cours… 📡 Choisissez votre protocole préféré :", () => opts([
+        { label: '💬 WhatsApp', href: wa('Bonjour Obed, je viens de votre portfolio.'), wa: true, after: 'thanks' },
+        { label: '✉️ Email', href: MAIL, after: 'thanks' },
+        { label: '💼 LinkedIn', href: LI },
+        back
+      ]));
+      if (step === 'joke') { const j = jokes[jokeI++ % jokes.length]; return say(j, () => opts([{ label: '😂 Une autre !', go: 'joke' }, back])); }
+      if (step === 'thanks') return say("Message transmis à l'humain. ✅ Obed vous répond dès qu'il sort de son terminal. Autre chose ?", menu);
+      if (step === 'hello') return say("Bip boup, salut ! 👋 Content de vous voir sur le réseau.", menu);
+      if (step === 'merci') return say("Avec plaisir ! Mon processeur rougit. 😊", menu);
+      return say(["Hmm… `404 : réponse introuvable`. 🤖 Je suis un petit robot avec un vocabulaire limité.", "Essayez un de ces choix, ou écrivez directement à Obed :"], () => opts([
+        { label: '💬 Écrire à Obed', href: wa('Bonjour Obed, je viens de votre portfolio. Ma question : ' + (arg || '')), wa: true, after: 'thanks' },
+        { label: '🚀 J\'ai un projet', go: 'project' },
+        { label: '😂 Une blague', go: 'joke' },
+        back
+      ]));
+    }
+
+    const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    function route(raw) {
+      const t = norm(raw);
+      const has = (...w) => w.some((x) => t.indexOf(x) !== -1);
+      const tok = new Set(t.split(/[^a-z0-9]+/));
+      const word = (...w) => w.some((x) => tok.has(x));
+      if (has('blague', 'joke', 'drole', 'rigol', 'humour')) return go('joke');
+      if (has('prix', 'tarif', 'cout', 'combien', 'devis', 'budget') || word('cher', 'chere')) return go('price');
+      if (has('reseau', 'wifi', 'wi-fi', 'cable', 'cablage', 'connexion', 'internet', 'routeur', 'equip', 'depann') || word('switch', 'box', 'lan')) return go('net');
+      if (has('logiciel', 'gestion', 'paie', 'stock', 'compta', 'tresorerie', 'immobilier', 'erp')) return go('svc', 'gest');
+      if (has('appli', 'mobile', 'android') || word('ios', 'app', 'apps')) return go('svc', 'app');
+      if (has('site', 'web', 'vitrine', 'page')) return go('svc', 'site');
+      if (has('logo', 'design', 'charte', 'graphi', 'identite', 'flyer', 'affiche')) return go('svc', 'design');
+      if (has('automat', 'n8n', 'robot') || word('bot', 'chatbot')) return go('svc', 'auto');
+      if (has('projet', 'realisation', 'portfolio', 'exemple', 'travaux')) return go('works');
+      if (has('contact', 'whatsapp', 'appel', 'telephone', 'email', 'mail', 'joindre', 'numero')) return go('contact');
+      if (has('obed', 'parcours', 'experience', 'profil') || word('qui')) return go('who');
+      if (has('merci', 'thanks', 'super', 'cool') || word('top')) return go('merci');
+      if (has('bonjour', 'salut', 'hello', 'bonsoir', 'coucou') || word('yo', 'hey')) return go('hello');
+      if (has('sudo')) return say("`Permission refusée` 🔒 Bien essayé, hacker. Seul Obed a les droits root ici.", menu);
+      if (word('42')) return say("La réponse à la grande question sur la vie, l'univers et le reste. Mais pour votre projet, il faudra un devis. 😄", menu);
+      return go('fallback', raw);
+    }
+
+    function start() {
+      if (started) return; started = true;
+      say(["Bip boup 👾 Salut, humain !", "Moi c'est **OBD**, l'assistant virtuel d'Obed. Version 1.0, zéro café, 100 % motivation.", "Je vous aide à quoi ?"], menu);
+    }
+    function openP() {
+      panel.hidden = false; tease.hidden = true; fab.setAttribute('aria-expanded', 'true');
+      const ping = fab.querySelector('.ping'); if (ping) ping.remove();
+      start(); setTimeout(() => $('obdInput').focus(), 50);
+    }
+    function closeP() { panel.hidden = true; fab.setAttribute('aria-expanded', 'false'); fab.focus(); }
+
+    fab.addEventListener('click', () => (panel.hidden ? openP() : closeP()));
+    tease.addEventListener('click', openP);
+    $('obdClose').addEventListener('click', closeP);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden && !$('modal').classList.contains('open')) closeP(); });
+    $('obdForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = $('obdInput').value.trim();
+      if (!v || busy) return;
+      $('obdInput').value = ''; clearOpts(); add(v, 'me'); route(v);
+    });
+    setTimeout(() => { if (panel.hidden && !started) tease.hidden = false; }, 6000);
+    setTimeout(() => { tease.hidden = true; }, 20000);
+  })();
 })();
 </script>
 </body>
